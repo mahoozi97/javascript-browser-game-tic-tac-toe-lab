@@ -1,0 +1,63 @@
+body {
+  background-color: gainsboro;
+  /* Use a system font, if none are available use an available sans-sarif */
+  font-family: system-ui, sans-serif;
+  margin: 10px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 325px;
+}
+
+.sqr {
+  width: 30%;
+  aspect-ratio: 1/1;
+  border: 3px solid black;
+  font-size: 64px;
+  text-align: center;
+}
+
+
+
+
+
+/* body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+}
+
+.main-div {
+  padding: 24px;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #ff043a;
+  border-radius: 4px;
+}
+
+.clear {
+  width: 150px;
+  margin-top: 100px;
+  margin: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+} */
