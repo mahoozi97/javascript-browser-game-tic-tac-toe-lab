@@ -16,6 +16,7 @@ const button5 = document.getElementById("js-5");
 const button6 = document.getElementById("js-6");
 const button7 = document.getElementById("js-7");
 const button8 = document.getElementById("js-8");
+const messageEl = document.querySelector("#message");
 const gameConsole = document.querySelector("#game-js");
 
 function checkWinner() {
@@ -62,10 +63,9 @@ function checkWinner() {
 function handleMessage() {
   checkWinner();
   if (message !== "") {
-    alert(`${message} - You: ${score.user}, Computer: ${score.computer}`);
-    window.location.reload()
+    messageEl.textContent = `${message} - You: ${score.user}, Computer: ${score.computer}`;
     gameOver = true;
-    isPlayerTurn = false;
+    isPlayerTurn;
     return;
   }
 }
@@ -166,7 +166,6 @@ function computer() {
   }
 }
 
-
 button0.addEventListener("click", () => {
   if (!isPlayerTurn && button[0] === "0") {
     button[0] = "x";
@@ -175,7 +174,6 @@ button0.addEventListener("click", () => {
     handleMessage();
   }
 });
-
 
 button1.addEventListener("click", () => {
   if (!isPlayerTurn && button[1] === "0") {
@@ -186,7 +184,6 @@ button1.addEventListener("click", () => {
   }
 });
 
-
 button2.addEventListener("click", () => {
   if (!isPlayerTurn && button[2] === "1") {
     button[2] = "x";
@@ -195,7 +192,6 @@ button2.addEventListener("click", () => {
     handleMessage();
   }
 });
-
 
 button3.addEventListener("click", () => {
   if (!isPlayerTurn && button[3] === "1") {
@@ -206,7 +202,6 @@ button3.addEventListener("click", () => {
   }
 });
 
-
 button4.addEventListener("click", () => {
   if (!isPlayerTurn && button[4] === "1") {
     button[4] = "x";
@@ -215,7 +210,6 @@ button4.addEventListener("click", () => {
     handleMessage();
   }
 });
-
 
 button5.addEventListener("click", () => {
   if (!isPlayerTurn && button[5] === "0") {
@@ -226,7 +220,6 @@ button5.addEventListener("click", () => {
   }
 });
 
-
 button6.addEventListener("click", () => {
   if (!isPlayerTurn && button[6] === "0") {
     button[6] = "x";
@@ -235,7 +228,6 @@ button6.addEventListener("click", () => {
     handleMessage();
   }
 });
-
 
 button7.addEventListener("click", () => {
   if (!isPlayerTurn && button[7] === "0") {
@@ -246,7 +238,6 @@ button7.addEventListener("click", () => {
   }
 });
 
-
 button8.addEventListener("click", () => {
   if (!isPlayerTurn && button[8] === "1") {
     button[8] = "x";
@@ -255,7 +246,6 @@ button8.addEventListener("click", () => {
     handleMessage();
   }
 });
-
 
 gameConsole.addEventListener("click", () => {
   if (message === "") {
