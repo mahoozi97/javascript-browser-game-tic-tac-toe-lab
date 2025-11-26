@@ -16,6 +16,8 @@ const button5 = document.getElementById("js-5");
 const button6 = document.getElementById("js-6");
 const button7 = document.getElementById("js-7");
 const button8 = document.getElementById("js-8");
+const tryAgainBtn = document.querySelector("#try-again");
+const restartBtn = document.querySelector("#restart");
 const messageEl = document.querySelector("#message");
 const gameConsole = document.querySelector("#game-js");
 
@@ -166,6 +168,22 @@ function computer() {
   }
 }
 
+function tryAgain() {
+  button = ["0", "0", "1", "1", "1", "0", "0", "0", "1"];
+  isPlayerTurn = false;
+  button0.textContent = "";
+  button1.textContent = "";
+  button2.textContent = "";
+  button3.textContent = "";
+  button4.textContent = "";
+  button5.textContent = "";
+  button6.textContent = "";
+  button7.textContent = "";
+  button8.textContent = "";
+  message = "";
+  messageEl.textContent = "";
+}
+
 button0.addEventListener("click", () => {
   if (!isPlayerTurn && button[0] === "0") {
     button[0] = "x";
@@ -280,4 +298,14 @@ gameConsole.addEventListener("click", () => {
       button8.textContent = button[8];
     }
   }
+});
+
+tryAgainBtn.addEventListener("click", () => {
+  tryAgain();
+});
+
+restartBtn.addEventListener("click", () => {
+  tryAgain();
+  score.computer = 0;
+  score.user = 0;
 });
