@@ -34,9 +34,9 @@ function checkWinner() {
   ) {
     score.user++;
     console.log("user win", button);
-    message = "user win";
+    message = "You win!";
     gameOver = true;
-    return "user win";
+    return "You win!";
   } else if (
     (button[0] === button[1] && button[1] === button[2] && button[1] === "o") ||
     (button[3] === button[4] && button[4] === button[5] && button[4] === "o") ||
@@ -49,9 +49,9 @@ function checkWinner() {
   ) {
     score.computer++;
     console.log("computer win", button);
-    message = "computer win";
+    message = "You Lose!";
     gameOver = true;
-    return "computer win";
+    return "You Lose!";
   } else {
     if (!button.includes("1") && !button.includes("0")) {
       console.log("drew", button);
