@@ -16,6 +16,7 @@ const button5 = document.getElementById("js-5");
 const button6 = document.getElementById("js-6");
 const button7 = document.getElementById("js-7");
 const button8 = document.getElementById("js-8");
+const buttonsEl = document.querySelectorAll(".sqr");
 const tryAgainBtn = document.querySelector("#try-again");
 const restartBtn = document.querySelector("#restart");
 const messageEl = document.querySelector("#message");
@@ -184,85 +185,77 @@ function tryAgain() {
   messageEl.textContent = "";
 }
 
-button0.addEventListener("click", () => {
-  if (!isPlayerTurn && button[0] === "0") {
-    button[0] = "x";
-    button0.textContent = button[0];
-    isPlayerTurn = true;
-    handleMessage();
-  }
-});
-
-button1.addEventListener("click", () => {
-  if (!isPlayerTurn && button[1] === "0") {
-    button[1] = "x";
-    button1.textContent = button[1];
-    isPlayerTurn = true;
-    handleMessage();
-  }
-});
-
-button2.addEventListener("click", () => {
-  if (!isPlayerTurn && button[2] === "1") {
-    button[2] = "x";
-    button2.textContent = button[2];
-    isPlayerTurn = true;
-    handleMessage();
-  }
-});
-
-button3.addEventListener("click", () => {
-  if (!isPlayerTurn && button[3] === "1") {
-    button[3] = "x";
-    button3.textContent = button[3];
-    isPlayerTurn = true;
-    handleMessage();
-  }
-});
-
-button4.addEventListener("click", () => {
-  if (!isPlayerTurn && button[4] === "1") {
-    button[4] = "x";
-    button4.textContent = button[4];
-    isPlayerTurn = true;
-    handleMessage();
-  }
-});
-
-button5.addEventListener("click", () => {
-  if (!isPlayerTurn && button[5] === "0") {
-    button[5] = "x";
-    button5.textContent = button[5];
-    isPlayerTurn = true;
-    handleMessage();
-  }
-});
-
-button6.addEventListener("click", () => {
-  if (!isPlayerTurn && button[6] === "0") {
-    button[6] = "x";
-    button6.textContent = button[6];
-    isPlayerTurn = true;
-    handleMessage();
-  }
-});
-
-button7.addEventListener("click", () => {
-  if (!isPlayerTurn && button[7] === "0") {
-    button[7] = "x";
-    button7.textContent = button[7];
-    isPlayerTurn = true;
-    handleMessage();
-  }
-});
-
-button8.addEventListener("click", () => {
-  if (!isPlayerTurn && button[8] === "1") {
-    button[8] = "x";
-    button8.textContent = button[8];
-    isPlayerTurn = true;
-    handleMessage();
-  }
+buttonsEl.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    console.log(event.target.id);
+    let targetId = event.target.id;
+    if (!isPlayerTurn) {
+      if (targetId === "js-0") {
+        if (button[0] === "0") {
+          button[0] = "x";
+          btn.textContent = button[0];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      } else if (targetId === "js-1") {
+        if (button[1] === "0") {
+          button[1] = "x";
+          btn.textContent = button[1];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      } else if (targetId === "js-2") {
+        if (button[2] === "1") {
+          button[2] = "x";
+          btn.textContent = button[2];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      } else if (targetId === "js-3") {
+        if (button[3] === "1") {
+          button[3] = "x";
+          btn.textContent = button[3];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      } else if (targetId === "js-4") {
+        if (button[4] === "1") {
+          button[4] = "x";
+          btn.textContent = button[4];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      } else if (targetId === "js-5") {
+        if (button[5] === "0") {
+          button[5] = "x";
+          btn.textContent = button[5];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      } else if (targetId === "js-6") {
+        if (button[6] === "0") {
+          button[6] = "x";
+          btn.textContent = button[6];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      } else if (targetId === "js-7") {
+        if (button[7] === "0") {
+          button[7] = "x";
+          btn.textContent = button[7];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      } else if (targetId === "js-8") {
+        if (button[8] === "1") {
+          button[8] = "x";
+          btn.textContent = button[8];
+          isPlayerTurn = true;
+          handleMessage();
+        }
+      }
+    }
+  });
 });
 
 gameConsole.addEventListener("click", () => {
